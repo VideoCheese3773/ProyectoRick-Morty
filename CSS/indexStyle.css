@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body{
+    background-color: black;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.mainPage{
+    position: relative;
+    margin-top: -55px;
+    background-image: url(../IMAGS/indexBackground.png);
+    background-position: center;
+    width: auto;
+    height: 980px;
+    filter: blur(5px);
+}
+
+.mainCont{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 980px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.title{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 5px 5px 5px black ;
+}
+
+.slideShow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+}
+
+.show{
+    padding: 6%;
+}
+
+.slideShow img{
+    width: 708px;
+}
+
+.navBar{
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: auto;
+    height: 55px;
+    padding-right: 15px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.cont{
+    background-color: black;
+    width: auto;
+    height: 925px;
+    color: white;
+    font-size: 28px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.line{
+    width: 500px;
+    height: 5px;
+    background-color: white;
+    padding-left: 65%;
+}
+
+.info{
+    padding: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.button1{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
