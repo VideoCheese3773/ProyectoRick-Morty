@@ -1,5 +1,5 @@
 .mainPage{
-    width: 1920px;
+    width: auto;
     height: 1080px;
     position: absolute;
     top: 0;
@@ -24,9 +24,14 @@
 }
 
 #arrowBack{
-    height: 90%;
+    height: 100%;
     margin: 0.5%;
     -webkit-filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.75));
+}
+
+#arrowBackA{
+    height: 90%;
+    margin: 0.5%;
 }
 
 .login{
