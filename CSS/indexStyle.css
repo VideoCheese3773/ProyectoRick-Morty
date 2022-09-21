@@ -108,8 +108,14 @@ body{
     text-shadow: 5px 5px 5px black;
 }
 
-.info h3{
+.contac{
     margin-left: 3%;
+}
+.infoArray{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .info img{
