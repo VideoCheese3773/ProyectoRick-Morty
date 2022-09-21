@@ -2,6 +2,7 @@ body {
     background-image: url("https://vsthemes.org/uploads/posts/2021-03/1616982332_skrinshot-29-03-2021-06_43_15.png") ;
 
     background-size: cover;
+
 }
 
 
@@ -13,12 +14,12 @@ body {
 header{
     width:100;
     position:fixed;
-    
+
 }
 
 
 #menu{
-    
+
     width: 450px;
 margin-top: 0px;
 }
@@ -28,7 +29,7 @@ margin-top: 0px;
 #menu ul a:hover{
     border-radius: 5px;
     color:blueviolet;
-    background: #000; 
+    background: #000;
 }
 
 
@@ -38,25 +39,25 @@ margin-top: 0px;
 }
 
 
-    
+
 .slider-container {
     display: flex;
     justify-content:flex-start;
-    
+
     width: 100%;
     height: 50vh;
     padding-top: 100px;
 }
 
-    
-.slider-container img {  
+
+.slider-container img {
     display: flex;
     border-radius: 5%;
     width: 100%;
     height: 95%;
     object-fit: contain;
     background-color: rgba(0, 0, 0, 0.329);
-    
+
 }
 
 .slider-container img:hover{
@@ -73,7 +74,7 @@ right:200px;
 display: flex;
 flex-direction: row;
     object-fit: contain;
-    
+
     height: 5%;
     width: 4%;
 }
@@ -85,7 +86,7 @@ right:80px;
 display: flex;
 flex-direction: row;
     object-fit: contain;
-    
+
     height: 5%;
     width: 1%;
 }
@@ -99,44 +100,46 @@ flex-direction: row;
     display: flex;
     flex-direction: row;
         object-fit: contain;
-        
+
         height: 5%;
         width: 30%;
         color: #ffff;
         background-size: 100%;
         background-color: rgba(0, 0, 0, 0.548);
 }
+
 .slider-containerr {
-    display: flex;
-    width: 100%;
-    height: 50vh;
-   margin-top: 150px;
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  margin-top: 150px;
 }
 
-.slider-containerr img {  
-    border-radius: 5%;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background-color: rgba(0, 0, 0, 0.329);
+.slider-containerr img {
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.329);
 }
 
 .slider-containerr img:hover{
 	opacity: 0.5
 }
+
 .slider-containerr c{
-    position: relative;
-    top: 12px;
-    right: 50px;
-    display: flex;
-    flex-direction: row;
-        object-fit: contain;
-       
-        height: 5%;
-        width: 30%;
-        color: #ffff;
-        background-size: 100%;
-        background-color: rgba(0, 0, 0, 0.548);
+  position: relative;
+  top: 12px;
+  right: 50px;
+  display: flex;
+  flex-direction: row;
+  object-fit: contain;
+
+  height: 5%;
+  width: 30%;
+  color: #ffff;
+  background-size: 100%;
+  background-color: rgba(0, 0, 0, 0.548);
 }
 
 
@@ -146,7 +149,7 @@ flex-direction: row;
     left: 350px;
     margin-top: 0px;
   }
-  
+
   .buscar input {
     width: 0;
     height: 40px;
@@ -158,7 +161,7 @@ flex-direction: row;
     border-radius: 50px;
     transition: all 0.6s ease;
   }
-  
+
   .btn {
     width: 55px;
     height: 55px;
@@ -173,56 +176,63 @@ flex-direction: row;
     border-radius: 50%;
     cursor: pointer;
   }
-  
-  .buscar:hover input {
-    width: 240px;
-  }
-  
-  .buscar input:focus {
-    width: 240px;
-  }
 
-  #barralat{
-    position: fixed;
-    width: 250px;
-    height: 100%;
-    left: -250px;
-    margin-top: 0px;
-    background-color: rgba(0, 0, 0, 0.541);
-    transition: all 500ms linear;
-  }
-
-#barralat.activa{
-    left: 0;
+.buscar:hover input {
+  width: 240px;
 }
 
-  #barralat ul li{
-color: #ffff;
-text-align: center;
-padding: 30px 2px;
-list-style: none;
-border-bottom: 1px solid #ffff;
-  }
+.buscar input:focus {
+  width: 240px;
+}
 
-  .pic{
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-  }
+#barralat{
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  margin-top: 0px;
+  background-color: rgba(25, 25 ,25, 0.9);
+  transition: all 500ms linear;
+  font-family: league gothic;
+  font-size: 20pt;
+}
 
-  #barralat .toggle-btn{
-    position: absolute;
-    cursor: pointer;
-    left: 260px;
-  }
+#barralat.activa{
+  left: 0;
+}
+#barralat ul a{
+  text-decoration: none;
+}
 
-  #barralat .toggle-btn span{
-    display: block;
-    width: 40px;
-    text-align: center;
-    font-size: 30px;
-    color:#ffff;
-  }
+#barralat ul li{
+  color: #ffff;
+  text-align: center;
+  padding: 30px 2px;
+  list-style: none;
+  border-bottom: 1px solid #ffff;
+}
 
-  
+#barralat ul li:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pic{
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#barralat .toggle-btn{
+  position: absolute;
+  cursor: pointer;
+  left: 260px;
+}
+
+#barralat .toggle-btn span{
+  display: block;
+  width: 40px;
+  text-align: center;
+  font-size: 30px;
+  color:#ffff;
+}
