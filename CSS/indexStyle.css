@@ -85,7 +85,7 @@ body{
 .cont{
     background-color: rgb(24, 24, 24);
     width: auto;
-    height: 925px;
+    height: fit-content;
     color: white;
     font-size: 28px;
     text-align: justify;
@@ -108,14 +108,20 @@ body{
     text-shadow: 5px 5px 5px black;
 }
 
-.contac{
+.info h3{
     margin-left: 3%;
+}
+
+.contact{
+    margin-left: 9%;
+    margin-top: 5%;
 }
 .infoArray{
     width: 75%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: 2%;
 }
 
 .info img{
