@@ -12,7 +12,7 @@ body{
 .mainPage{
     position: relative;
     margin-top: -55px;
-    background-image: url(../IMAGS/indexBackground.png);
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../IMAGS/indexBackground.png);
     background-position: center;
     width: auto;
     height: 980px;
