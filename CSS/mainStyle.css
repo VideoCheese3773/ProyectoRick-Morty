@@ -191,7 +191,7 @@ flex-direction: row;
   margin-top: 0px;
   background-color: rgba(25, 25 ,25, 0.9);
   transition: all 500ms linear;
-  font-family: league gothic;
+  font-family: league gothic, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 20pt;
 }
 

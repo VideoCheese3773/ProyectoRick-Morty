@@ -50,7 +50,7 @@
     width: 60%;
     height: 10%;
     text-align: center;
-    font-family: league gothic;
+    font-family: league gothic, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
     border-radius: 50px;
     -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.75));
@@ -58,7 +58,7 @@
 }
 
 .textFormat{
-    font-family: league gothic;
+    font-family: league gothic, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
     color: whitesmoke;
     text-shadow: 5px 5px 2px rgba(0,0,0,0.5);
@@ -87,7 +87,7 @@
 }
 
 #signupText{
-    font-family: league gothic;
+    font-family: league gothic, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
     color: whitesmoke;
 }
