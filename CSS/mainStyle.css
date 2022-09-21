@@ -1,0 +1,228 @@
+body {
+    background-image: url("https://vsthemes.org/uploads/posts/2021-03/1616982332_skrinshot-29-03-2021-06_43_15.png") ;
+
+    background-size: cover;
+}
+
+
+*{
+    padding:0%;
+    margin:0%;
+}
+
+header{
+    width:100;
+    position:fixed;
+    
+}
+
+
+#menu{
+    
+    width: 450px;
+margin-top: 0px;
+}
+
+
+
+#menu ul a:hover{
+    border-radius: 5px;
+    color:blueviolet;
+    background: #000; 
+}
+
+
+#main{
+    background:transparent;
+    height:fixed
+}
+
+
+    
+.slider-container {
+    display: flex;
+    justify-content:flex-start;
+    
+    width: 100%;
+    height: 50vh;
+    padding-top: 100px;
+}
+
+    
+.slider-container img {  
+    display: flex;
+    border-radius: 5%;
+    width: 100%;
+    height: 95%;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.329);
+    
+}
+
+.slider-container img:hover{
+	opacity: 0.5
+}
+
+
+
+.slider-container p{
+    color:#ffff;
+    position: relative;
+top: 294px;
+right:200px;
+display: flex;
+flex-direction: row;
+    object-fit: contain;
+    
+    height: 5%;
+    width: 4%;
+}
+
+.slider-container a{
+    position: relative;
+top: 294px;
+right:80px;
+display: flex;
+flex-direction: row;
+    object-fit: contain;
+    
+    height: 5%;
+    width: 1%;
+}
+
+
+
+.slider-container c{
+    position: relative;
+    top: 15px;
+    right:130px;
+    display: flex;
+    flex-direction: row;
+        object-fit: contain;
+        
+        height: 5%;
+        width: 30%;
+        color: #ffff;
+        background-size: 100%;
+        background-color: rgba(0, 0, 0, 0.548);
+}
+.slider-containerr {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+   margin-top: 150px;
+}
+
+.slider-containerr img {  
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+.slider-containerr img:hover{
+	opacity: 0.5
+}
+.slider-containerr c{
+    position: relative;
+    top: 12px;
+    right: 50px;
+    display: flex;
+    flex-direction: row;
+        object-fit: contain;
+       
+        height: 5%;
+        width: 30%;
+        color: #ffff;
+        background-size: 100%;
+        background-color: rgba(0, 0, 0, 0.548);
+}
+
+
+.buscar {
+    position: relative;
+    padding: 5px;
+    left: 350px;
+    margin-top: 0px;
+  }
+  
+  .buscar input {
+    width: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #222;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 50px;
+    transition: all 0.6s ease;
+  }
+  
+  .btn {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: #32CD32;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .buscar:hover input {
+    width: 240px;
+  }
+  
+  .buscar input:focus {
+    width: 240px;
+  }
+
+  #barralat{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.541);
+    transition: all 500ms linear;
+  }
+
+#barralat.activa{
+    left: 0;
+}
+
+  #barralat ul li{
+color: #ffff;
+text-align: center;
+padding: 30px 2px;
+list-style: none;
+border-bottom: 1px solid #ffff;
+  }
+
+  .pic{
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  #barralat .toggle-btn{
+    position: absolute;
+    cursor: pointer;
+    left: 260px;
+  }
+
+  #barralat .toggle-btn span{
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    color:#ffff;
+  }
+
+  

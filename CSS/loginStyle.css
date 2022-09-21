@@ -1,6 +1,5 @@
 .mainPage{
     width: auto;
-    height: 1080px;
     position: absolute;
     top: 0;
     left: 0;
@@ -89,6 +88,10 @@
     font-family: league gothic;
     font-size: 20px;
     color: whitesmoke;
+}
+
+#optionsTextA{
+    text-decoration: none;
 }
 
 .loginButton{
