@@ -47,6 +47,7 @@ body{
     width: auto;
     overflow-y: hidden;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     flex-wrap: nowrap;
 }
 
@@ -56,6 +57,7 @@ body{
 
 .show{
     padding: 6%;
+    scroll-snap-align: start;
     -webkit-filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.75));
 }
 
