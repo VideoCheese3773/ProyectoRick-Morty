@@ -1,70 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick & Morty Wiki</title>
-    <link rel="stylesheet type:text/css" href="../CSS/mainStyle.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/mainStyle.css">
   </head>
+  <body>
 
-<body>
-  <header>
-    <section id="menu">
-        <ul>
-        <div class="buscar">
-            <input type="text" placeholder="Buscar" required />
-            <div class="btn">
-              <i class="fas fa-search icon"></i>
-            </div>
-        </ul>
-      </section>
-  </header>
+    <div class="mainPage">
 
-  <div id="barralat">
-    <div class="toggle-btn">
-      <span>
-        &#9776;
-      </span>
+      <img id="mainBackground" src="../IMAGS/mainBackground.png" alt="mainBackground">
+
+      <div class="navBar">
+        <a id="arrowBackA" href="../HTML/index.html">
+            <img id="arrowBack" src="../ICONS/arrowBack.png" alt="arrowBack">
+        </a>
+        <div id="line"></div>
+        <input type="text" placeholder="Search" id="search">
+        <a id="lupeA" href="">
+                  <img id="lupe" src="../ICONS/zoom.png" alt="search">
+        </a>
+      </div>
+
+      <div class="sideMenu">
+
+        <a id="userA" href="../HTML/index.html">
+          <div class="user">
+            <img id="userImag" src="../IMAGS/user.png" alt="user">
+            <h1>TheCoolerMorty</h1>
+          </div>
+        </a>
+
+        <a id="optionA" href="../HTML/index.html">
+          <div class="option">
+            <img id="optionImag" src="../ICONS/home.png" alt="home">
+            <h1>
+              Home
+            </h1>
+          </div>
+        </a>
+
+        <a id="optionA" href="../HTML/index.html">
+          <div class="option">
+            <img id="optionImag" src="../ICONS/starFill.png" alt="favs">
+            <h1>
+              Favorites
+            </h1>
+          </div>
+        </a>
+
+        <a id="optionA" href="../HTML/index.html">
+          <div class="option">
+            <img id="optionImag" src="../ICONS/cog.png" alt="sets">
+            <h1>
+              Settings
+            </h1>
+          </div>
+        </a>
+
+        <a id="optionA" href="../HTML/index.html">
+          <div class="option">
+            <img id="optionImag" src="../ICONS/running.png" alt="sets">
+            <h1>
+              Exit
+            </h1>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="mainContent">
+
+        <div class="item">
+          <h1 id="name">Rick Sanchez</h1>
+          <h2 id="gender">Male</h2>
+        </div>
+
+      </div>
+
     </div>
-    <ul>
-        <a href=""><li><img src="https://static1.personality-database.com/profile_images/84c99158b915461498f6dc2767c67480.png" alt="pic" class="pic"> Chulumblum :P</li></a>
-        <a href=""><li>Home</li></a>
-        <a href=""><li>Favorites</li></a>
-        <a href=""><li>Settings</li></a>
-        <a href="../HTML/index.html"><li>Exit</li></a>
-    </ul>
-  </div>
 
-  <div class="slider-container">
-    <div class="sliderItem">
-      <h1>Rick Sanchez</h1>
-      <img id="star" src="../ICONS/starHollow.png" alt="">
-      <p>Male</p>
-      <img src="https://pm1.narvii.com/6540/9cce1f260e95a2f3ee4da1bee06753accd250567_hq.jpg" alt="">
-    </div>
+    <script src="../JS/mainScript.js" async defer></script>
 
-    <div class="sliderItem">
-      <p>bruh</p>
-    </div>
-
-    <div class="sliderItem">
-      <p>bruh</p>
-    </div>
-
-    <div class="sliderItem">
-      <p>bruh</p>
-    </div>
-
-    <div class="sliderItem">
-      <p>bruh</p>
-    </div>
-
-    <div class="sliderItem">
-      <p>bruh</p>
-    </div>
-  </div>
-
-  <script src="../JS/mainScript.js"></script>
   </body>
 </html>
