@@ -6,7 +6,7 @@
     <title>Rick & Morty Wiki</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../CSS/detailsStyle.css">
+    <link rel="stylesheet" href="../CSS/userStyle.css">
   </head>
   <body>
 
@@ -53,7 +53,7 @@
         </a>
 
         <a id="optionA" href="../HTML/user.html">
-          <div class="option">
+          <div id="selected" class="option">
             <img id="optionImag" src="../ICONS/cog.png" alt="sets">
             <h1>
               Settings
@@ -74,26 +74,22 @@
 
       <div class="mainContent">
 
-        <div class="details">
-          <img id="detailsImag" src="../IMAGS/RickSanchez.png" alt="Rick">
-          <h1 id="name">Rick Sanchez</h1>
-          <h1 id="gender">Male</h1>
-          <h1 id="status">Status</h1>
-          <h1 id="statusResult">Alive</h1>
-          <h1 id="species">Species</h1>
-          <h1 id="speciesResult">Human</h1>
-          <h1 id="location">Last Known Location</h1>
-          <h1 id="locationResult">Citadel Of Ricks</h1>
-          <h1 id="appearance">First Seen In</h1>
-          <h1 id="appearanceResult">Pilot</h1>
-          <img id="star" src="../ICONS/starHollow.png" alt="atar">
+        <div class="config">
+          <img id="configImag" src="../IMAGS/user.png" alt="user">
+          <h1 id="name">TheCoolerMorty</h1>
+          <a id="changeName" href="../HTML/register.html">Change Name</a>
+          <h1 id="email">TheCoolerMorty@gmail.com</h1>
+          <a id="changeEmail" href="../HTML/register.html">Change E-mail</a>
+          <a id="changePass" href="../HTML/register.html">Change Password</a>
+          <a id="changePfp" href="">Upload Image</a>
+          <a id="signOff" href="../HTML/login.html">Sign Off</a>
         </div>
 
       </div>
 
     </div>
 
-    <script src="../JS/detailsScript.js" async defer></script>
+    <script src="../JS/userScript.js" async defer></script>
 
   </body>
 </html>
