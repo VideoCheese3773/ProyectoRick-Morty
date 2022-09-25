@@ -4,9 +4,11 @@
     font-weight: 100;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
 body{
     background-color: black;
-    font-family:league gothic, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: League Gothic,Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .mainPage{
