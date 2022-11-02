@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../CSS/registerStyle.css">
-        <script src="../JS/registerScript.js" async defer></script>
     </head>
+
     <body>
         <div class="mainPage">
 
@@ -22,15 +22,15 @@
 
             <div class="register">
 
-                <input type="text" class="input" id="" placeholder="Username">
+                <input type="text" class="input" id="name" placeholder="Username">
 
-                <input type="email" class="input" id="" placeholder="E-Mail">
+                <input type="email" class="input" id="email" placeholder="E-Mail">
 
-                <input type="password" class="input" id="" placeholder="Password">
+                <input type="password" class="input" id="password" placeholder="Password">
 
                 <input type="password" class="input" id="" placeholder="Verify Password">
 
-                <a id="signupButtonA" href="../HTML/login.html">
+                <a id="signupButtonA" onclick="signup()">
                     <div class="signupButton">
                         <p id="signupText">Sign Up</p>
                     </div>
@@ -38,6 +38,8 @@
 
             </div>
         </div>
+
+    <script src="../JS/registerScript.js" async defer></script>
 
     </body>
 </html>
