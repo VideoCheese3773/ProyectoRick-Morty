@@ -7,7 +7,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../CSS/loginStyle.css">
-        <script src="../JS/loginScript.js" async defer></script>
     </head>
     <body>
         <div class="mainPage">
@@ -27,15 +26,12 @@
                 <input type="password" class="input" id="password" placeholder="Password">
 
                 <div class="options">
-                    <div class="optionsRight">
+                    <div>
                         <a id="optionsTextA" href="../HTML/register.html">
                             <p class="optionsText" id="createAcc">Create account</p>
                         </a>
                     </div>
-                    <div class="optionsLeft">
-                        <input type="checkbox" id="check">
-                        <p class="optionsText">Remember password</p>
-                    </div>
+
                 </div>
 
                 <a class="loginButtonA" onclick="login()">
@@ -46,6 +42,9 @@
 
             </div>
         </div>
+
+        <script src="../model/user.js" async defer></script>
+        <script src="../JS/loginScript.js" async defer></script>
 
     </body>
 </html>

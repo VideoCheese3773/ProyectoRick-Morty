@@ -1,5 +1,3 @@
-const storage = window.localStorage
-
 //Logica para el local storage
 let userList = [];
 
@@ -19,8 +17,8 @@ function saveUsers() {
 }
 
 function validateUsername(user) {
-    if (email == "") {
-        alert("Your email cannot be left empty");
+    if (user == "") {
+        alert("Your username cannot be left empty");
         return true;
     }
     for (let index = 0; index < userList.length; index++) {
@@ -33,6 +31,7 @@ function validateUsername(user) {
 function validateEmail(email) {
     if (email == "") {
         alert("Your email cannot be left empty");
+        return true;
     }
     if (email.includes("@") && email.includes(".")) {
         for (let index = 0; index < userList.length; index++) {
@@ -49,13 +48,19 @@ function validateEmail(email) {
 }
 
 function validatePassword(password, verifyPassword) {
-    if (password.length < 4) {
+    if (password == "") {
+        alert("Your password cannot be left empty");
+        return true;
+    } else if (verifyPassword == "") {
+        alert("Your password verification cannot be left empty");
+        return true;
+    } else if (password.length < 4) {
         alert("Your password must be longer than 4 characters");
         return true;
     } else if (password !== verifyPassword) {
         alert("Your passwords doesn't match");
         return true;
-    } else{
+    } else {
         return false;
     }
 }
@@ -79,14 +84,14 @@ function signup() {
     const password = document.getElementById("password").value
     const verifyPassword = document.getElementById("verifyPassword").value
 
-        if (validateUsername(name)) {
-            return;
-        } else if (validateEmail(email)) {
-            return;
-        } else if (validatePassword(password, verifyPassword)) {
-            return;
-        } else {
-            createNewUser(name, email, password);
-        }
+    if (validateUsername(name)) {
+        return;
+    } else if (validateEmail(email)) {
+        return;
+    } else if (validatePassword(password, verifyPassword)) {
+        return;
+    } else {
+        createNewUser(name, email, password);
+    }
 
 }
