@@ -1,82 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Rick & Morty Wiki</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../CSS/indexStyle.css" type="text/css">
-        <script src="../JS/indexScript.js" async defer></script>
-    </head>
-    <body>
-        <div class="navBar">
-            <a href="../HTML/login.html">
-                <input type="button" value="Enter" class="button1">
-            </a>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rick & Morty Wiki</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/indexStyle.css" type="text/css">
+</head>
+
+<body>
+    <div class="navBar">
+        <a href="../HTML/login.html">
+            <input type="button" value="Enter" class="button1">
+        </a>
+    </div>
+
+    <div class="mainCont">
+        <div class="title">
+            <h1>The Rick and Morty Fan Wiki</h1>
+            <h4>The ultimate Rick and Morty Character Wiki</h4>
         </div>
 
-        <div class="mainCont">
-            <div class="title">
-                <h1>The Rick and Morty Fan Wiki</h1>
-                <h4>The ultimate Rick and Morty Character Wiki</h4>
-            </div>
+        <div class="slideShow">
+            <div class="show"> <img src="../IMAGS/1.png" alt="1"></div>
+            <div class="show"> <img src="../IMAGS/2.png" alt="2"></div>
+            <div class="show"> <img src="../IMAGS/3.png" alt="3"></div>
+            <div class="show"> <img src="../IMAGS/4.png" alt="4"></div>
+        </div>
+        <p id="instructions" class="title">Left And Right Arrow Keys To Navigate</p>
+    </div>
 
-            <div class="slideShow">
-                <div class="show"> <img src="../IMAGS/1.png" alt="1"></div>
-                <div class="show"> <img src="../IMAGS/2.png" alt="2"></div>
-                <div class="show"> <img src="../IMAGS/3.png" alt="3"></div>
-                <div class="show"> <img src="../IMAGS/4.png" alt="4"></div>
-            </div>
-            <p id="instructions" class="title">Left And Right Arrow Keys To Navigate</p>
+    <div class="mainPage">
+    </div>
+
+    <div class="cont">
+        <div id="description" class="info">
         </div>
 
-        <div class="mainPage">
+        <div class="info">
+            <h1>The Ones Behind All Of This</h1>
+            <div id="devContainer">
+            </div>
+
         </div>
 
-        <div class="cont">
-            <div class="info">
-                <h1>About Us</h1>
-                <br>
-                <h3>
-                    We are a non profit asociation that it's only purpose is to watch Rick and Morty until the end of time.<br>
-                    Like for real, wedon't do anything else but watch Rickand Morty<br>
-                    We are actually considering starting a cult or something, I mean, have you seen us? we don't see the light of day.<br>
-                </h3>
-                <br>
-                <h3>
-                    We do have some social media accounts but we don't really use them, anyways here they are.
-                </h3>
-                <br>
-                <a href="https://twitter.com/RickandMorty"><img id="twitter" src="../ICONS/twitter.png" alt="twitter"></a>
-                <a href="https://www.facebook.com/RickandMorty/"><img src="../ICONS/facebook.png" alt="facebook"></a>
-                <a href="https://www.instagram.com/rickandmorty/"><img src="../ICONS/instagram.png" alt="instagram"></a>
-                <a href="https://www.youtube.com/adultswim1"><img src="../ICONS/youtube.png" alt="youtube"></a>
-            </div>
+        <div class="line"></div>
 
-            <div class="line"></div>
-
-            <div class="contact">
-                <h1>Contact Us!</h1>
-            </div>
-
-            <div class="infoArray">
-                <div class="info">
-                    <h3>Facey McFace</h3>
-                    <h3>+1 123456789</h3>
-                    <h3>NotABurnerEmail@yahoo.com</h3>
-                </div>
-                <div class="info">
-                    <h3>Handy McHand</h3>
-                    <h3>+1 987654321</h3>
-                    <h3>NotAFlamerEmail@yahoo.com</h3>
-                </div>
-                <div class="info">
-                    <h3>Leggy McLeg</h3>
-                    <h3>+1 192837645</h3>
-                    <h3>NotAScorcherEmail@yahoo.com</h3>
-                </div>
-            </div>
+        <div class="contact">
+            <h1>Contact Us!</h1>
         </div>
-    </body>
+
+        <div id="contactContainer" class="infoArray info">
+
+        </div>
+        <br><br>
+    </div>
+    <script src="../model/contact.js" async defer></script>
+    <script src="../model/description.js" async defer></script>
+    <script src="../model/devs.js" async defer></script>
+    <script src="../JS/indexScript.js" async defer></script>
+</body>
+
 </html>

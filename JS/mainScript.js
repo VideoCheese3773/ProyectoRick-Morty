@@ -82,7 +82,7 @@ function logout() {
 
 //Funciones de logica Personajes
 function generateContent() {
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 20; i++) {
         let id = i;
         let name = `Rick Sanchez ${i}`;
         let gender = "Male";
