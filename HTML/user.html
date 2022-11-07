@@ -15,13 +15,13 @@
       <img id="mainBackground" src="../IMAGS/mainBackground.png" alt="mainBackground">
 
       <div class="navBar">
-        <a id="arrowBackA" href="../HTML/index.html">
-            <img id="arrowBack" src="../ICONS/arrowBack.png" alt="arrowBack">
+        <a id="arrowBackA" onclick="logout()">
+          <img id="arrowBack" src="../ICONS/arrowBack.png" alt="arrowBack">
         </a>
         <div id="line"></div>
         <input type="text" placeholder="Search" id="search">
         <a id="lupeA" href="">
-                  <img id="lupe" src="../ICONS/zoom.png" alt="search">
+          <img id="lupe" src="../ICONS/zoom.png" alt="search">
         </a>
       </div>
 
@@ -30,7 +30,7 @@
         <a id="userA" href="../HTML/user.html">
           <div class="user">
             <img id="userImag" src="../IMAGS/user.png" alt="user">
-            <h1>TheCoolerMorty</h1>
+            <h1 id="username">Username placeholder</h1>
           </div>
         </a>
 
@@ -61,7 +61,7 @@
           </div>
         </a>
 
-        <a id="optionA" href="../HTML/index.html">
+        <a id="optionA" onclick="logout()">
           <div class="option">
             <img id="optionImag" src="../ICONS/running.png" alt="sets">
             <h1>
@@ -76,13 +76,13 @@
 
         <div class="config">
           <img id="configImag" src="../IMAGS/user.png" alt="user">
-          <h1 id="name">TheCoolerMorty</h1>
+          <h1 id="name">username placeholder</h1>
           <a id="changeName" href="../HTML/register.html">Change Name</a>
-          <h1 id="email">TheCoolerMorty@gmail.com</h1>
+          <h1 id="email">email placeholder</h1>
           <a id="changeEmail" href="../HTML/register.html">Change E-mail</a>
           <a id="changePass" href="../HTML/register.html">Change Password</a>
           <a id="changePfp" href="">Upload Image</a>
-          <a id="signOff" href="../HTML/index.html">Sign Off</a>
+          <a id="signOff" onclick="logout()">Sign Off</a>
         </div>
 
       </div>

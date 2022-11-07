@@ -7,7 +7,7 @@ function loadUsers() {
     if (loadedUsers !== null) {
         userList = JSON.parse(loadedUsers);
     };
-    console.log("load users:", userList);
+    //console.log("load users:", userList);
 }
 loadUsers(); //primera carga de users
 

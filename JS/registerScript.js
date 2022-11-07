@@ -7,7 +7,7 @@ function loadUsers() {
     if (loadedUsers !== null) {
         userList = JSON.parse(loadedUsers);
     };
-    console.log("load users:", userList);
+    //console.log("load users:", userList);
 }
 loadUsers(); //primera carga de users
 
@@ -65,17 +65,17 @@ function validatePassword(password, verifyPassword) {
     }
 }
 
-function createNewUser(name, email, password) {
+function createNewUser(name, email, password, favoriteList) {
     const newUser = {
         name: name,
         email: email,
         password: password,
-        isLogged: false
+        isLogged: true,
+        favoriteList: null
     }
     userList.push(newUser);
     saveUsers();
     console.log("new user", newUser.name, "saved")
-    window.location.href = './login.html'
 }
 
 function signup() {
@@ -92,6 +92,7 @@ function signup() {
         return;
     } else {
         createNewUser(name, email, password);
+        window.location.href = './main.html'
     }
 
 }
