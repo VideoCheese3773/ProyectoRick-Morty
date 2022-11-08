@@ -1,5 +1,7 @@
 const username = document.getElementById("username");
 const mainContent = document.getElementById("mainContent");
+const nickname = document.getElementById("name");
+const email = document.getElementById("email");
 
 //Logica del local storage
 let userList = [];
@@ -64,6 +66,8 @@ function findLoggedUser() {
 function updateHUD() {
     loggedUser = findLoggedUser();
     username.innerHTML = loggedUser.name;
+    nickname.innerHTML = loggedUser.name;
+    email.innerHTML = loggedUser.email;
 }
 updateHUD();
 
