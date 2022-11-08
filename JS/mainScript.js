@@ -91,7 +91,8 @@ function generateContent() {
         let lkl = "Citadel Of Ricks";
         let fsi = "Pilot";
         let favorite = false;
-        let newCharacter = new Character(id, name, gender, status, species, lkl, fsi, favorite);
+        let image = "../IMAGS/RickSanchez.png";
+        let newCharacter = new Character(id, name, gender, status, species, lkl, fsi, favorite, image);
         characterList.push(newCharacter);
         saveCharacters();
     }

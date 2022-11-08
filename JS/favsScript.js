@@ -81,22 +81,6 @@ function logout() {
 }
 
 //Funciones de logica Personajes
-function generateContent() {
-    for (let i = 0; i < 15; i++) {
-        let id = i;
-        let name = `Rick Sanchez ${i}`;
-        let gender = "Male";
-        let status = "Alive";
-        let species = "Human";
-        let lkl = "Citadel Of Ricks";
-        let fsi = "Pilot";
-        let favorite = false;
-        let newCharacter = new Character(id, name, gender, status, species, lkl, fsi, favorite);
-        characterList.push(newCharacter);
-        saveCharacters();
-    }
-}
-//generateContent(); //content generation trigger
 
 function showCharacters() {
     for (let i = 0; i < favoriteList.length; i++) {
