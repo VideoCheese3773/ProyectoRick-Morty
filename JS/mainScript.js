@@ -81,6 +81,14 @@ function logout() {
 }
 
 //Funciones de logica Personajes
+const fetchData = async () => {
+    const url = "https://rickandmortyapi.com/api/character";
+    const data = await fetch(url);
+    const dataJson = await data.json();
+    console.log("dataJson =",dataJson);
+}
+fetchData();// Primer fetch a la API
+
 function generateContent() {
     for (let i = 0; i < 20; i++) {
         let id = i;
