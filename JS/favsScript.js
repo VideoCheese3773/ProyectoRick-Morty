@@ -85,7 +85,7 @@ function logout() {
 function showCharacters() {
     for (let i = 0; i < favoriteList.length; i++) {
         let character = new Character(
-            favoriteList[i].id, favoriteList[i].name, favoriteList[i].gender, favoriteList[i].status, favoriteList[i].species, favoriteList[i].lkl, favoriteList[i].fsi, favoriteList[i].favorite
+            favoriteList[i].id, favoriteList[i].name, favoriteList[i].gender, favoriteList[i].status, favoriteList[i].species, favoriteList[i].lkl, favoriteList[i].fsi, favoriteList[i].favorite, favoriteList[i].image
         )
         if (character.favorite == true) {
             character.renderFav(mainContent);
@@ -154,6 +154,20 @@ function favorite(id) {
     } else if (starContain.includes("Hollow")) {
         star.src = "../ICONS/starFill.png";
         addFavorite(id);
+    }
+}
+
+function details(id) {
+    let character = null;
+    for (let i = 0; i < characterList.length; i++) {
+        if (characterList[i].id == id) {
+            character = characterList[i];
+        }
+    }
+    if (character == null) {
+        alert("Could not get details for this character.")
+    } else {
+        window.location.href = './details.html?id=' + character.id
     }
 }
 

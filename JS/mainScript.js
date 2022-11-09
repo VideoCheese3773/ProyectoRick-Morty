@@ -102,13 +102,12 @@ function generateContent() {
 function showCharacters() {
     for (let i = 0; i < characterList.length; i++) {
         let character = new Character(
-            characterList[i].id, characterList[i].name, characterList[i].gender, characterList[i].status, characterList[i].species, characterList[i].lkl, characterList[i].fsi, characterList[i].favorite
+            characterList[i].id, characterList[i].name, characterList[i].gender, characterList[i].status, characterList[i].species, characterList[i].lkl, characterList[i].fsi, characterList[i].favorite, characterList[i].image
         )
         if (character.favorite == true) {
             character.renderFav(mainContent);
         } else if (character.favorite == false) {
             character.renderNoFav(mainContent);
-
         }
     }
 }
@@ -169,6 +168,20 @@ function favorite(id) {
     } else if (starContain.includes("Hollow")) {
         star.src = "../ICONS/starFill.png";
         addFavorite(id);
+    }
+}
+
+function details(id) {
+    let character = null;
+    for (let i = 0; i < characterList.length; i++) {
+        if (characterList[i].id == id) {
+            character = characterList[i];
+        }
+    }
+    if (character == null) {
+        alert("Could not get details for this character.")
+    } else {
+        window.location.href = './details.html?id=' + character.id
     }
 }
 

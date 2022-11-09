@@ -77,5 +77,85 @@ function logout() {
             saveFavorites();
         }
     }
-
 }
+
+function addFavorite(id) {
+    for (let i = 0; i < characterList.length; i++) {
+        if (characterList[i].id == id) {
+            characterList[i].favorite = true;
+            favoriteList.push(characterList[i]);
+            saveCharacters();
+            saveFavorites();
+        }
+    }
+    for (let index = 0; index < userList.length; index++) {
+        if (userList[index].isLogged == true) {
+            userList[index].favoriteList = favoriteList;
+            saveUsers();
+        }
+    }
+}
+
+function removeFavorite(id) {
+    for (let i = 0; i < favoriteList.length; i++) {
+        if (favoriteList[i].id == id) {
+            favoriteList.splice(i, 1);
+            saveFavorites();
+        }
+    }
+    for (let i = 0; i < characterList.length; i++) {
+        if (characterList[i].id == id) {
+            characterList[i].favorite = false;
+            saveCharacters();
+        }
+    }
+    for (let index = 0; index < userList.length; index++) {
+        if (userList[index].isLogged == true) {
+            userList[index].favoriteList = favoriteList;
+            saveUsers();
+        }
+    }
+}
+
+function favorite(id) {
+    const star = document.getElementById(`star${id}`);
+    let starContain = star.src;
+    if (starContain.includes("Fill")) {
+        star.src = "../ICONS/starHollow.png";
+        removeFavorite(id);
+    } else if (starContain.includes("Hollow")) {
+        star.src = "../ICONS/starFill.png";
+        addFavorite(id);
+    }
+}
+
+function showCharacter(character) {
+        let newCharacter = new Character(
+            character.id, character.name, character.gender, character.status, character.species, character.lkl, character.fsi, character.favorite, character.image
+        )
+        console.log(newCharacter)
+        if (newCharacter.favorite == true) {
+            newCharacter.renderDetailFav(mainContent);
+        } else if (newCharacter.favorite == false) {
+            newCharacter.renderDetailNoFav(mainContent);
+        }
+}
+
+function findCharacter(id) {
+    for (let i = 0; i < characterList.length; i++) {
+        if (characterList[i].id == id) {
+            return characterList[i];
+        }
+    }
+    console.log("character not found");
+}
+
+function updateDetails() {
+    let params = new URLSearchParams(window.location.search);
+    let characterId = params.get('id');
+    let character = findCharacter(characterId);
+    console.log(character)
+    showCharacter(character);
+}
+
+updateDetails();

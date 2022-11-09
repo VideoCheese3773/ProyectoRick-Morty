@@ -140,7 +140,7 @@
     text-shadow: 5px 5px 5px black;
 }
 
-.mainContent{
+#mainContent{
     width: 80%;
     height: 93.2%;
     /*background-color: rgba(0, 255, 255, 0.329);*/
@@ -271,7 +271,7 @@
     left: 42%;
 }
 
-#star{
+.star{
     position: relative;
     bottom: 250%;
     left: 92%;
