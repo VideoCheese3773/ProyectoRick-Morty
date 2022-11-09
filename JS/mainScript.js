@@ -5,6 +5,7 @@ const mainContent = document.getElementById("mainContent");
 let userList = [];
 let characterList = [];
 let favoriteList = [];
+let apiList = [];
 
 //Funciones de carga y guardado
 function loadUsers() {
@@ -23,7 +24,7 @@ function loadCharacters() {
     };
     console.log("load characters:", characterList);
 }
-loadCharacters(); //primera carga de characters
+//loadCharacters(); //primera carga de characters
 
 function loadFavorites() {
     let user = findLoggedUser();
@@ -43,6 +44,11 @@ function saveUsers() {
 function saveCharacters() {
     let json = JSON.stringify(characterList);
     localStorage.setItem("character", json);
+}
+
+function saveApi() {
+    let json = JSON.stringify(apiList);
+    localStorage.setItem("api", json);
 }
 
 function saveFavorites() {
@@ -85,27 +91,41 @@ const fetchData = async () => {
     const url = "https://rickandmortyapi.com/api/character";
     const data = await fetch(url);
     const dataJson = await data.json();
-    console.log("dataJson =",dataJson);
+    apiList = dataJson.results;
+    console.log('fetch apiList', apiList);
+    saveApi();
 }
-fetchData();// Primer fetch a la API
+fetchData();
 
 function generateContent() {
-    for (let i = 0; i < 20; i++) {
-        let id = i;
-        let name = `Rick Sanchez ${i}`;
-        let gender = "Male";
-        let status = "Alive";
-        let species = "Human";
-        let lkl = "Citadel Of Ricks";
-        let fsi = "Pilot";
-        let favorite = false;
-        let image = "../IMAGS/RickSanchez.png";
-        let newCharacter = new Character(id, name, gender, status, species, lkl, fsi, favorite, image);
-        characterList.push(newCharacter);
+    console.log('apiList', apiList);
+
+    if (apiList.length > 0) {
+        console.log("cheers!");
+        for (let i = 0; i < apiList.length; i++) {
+            let id = apiList[i].id;
+            let name = apiList[i].name;
+            let gender = apiList[i].gender;
+            let status = apiList[i].status;
+            let species = apiList[i].species;
+            let lkl = apiList[i].location.name;
+            let fsi = apiList[i].origin;
+            let favorite = false;
+            let image = apiList[i].image;
+            let newCharacter = new Character(id, name, gender, status, species, lkl, fsi, favorite, image);
+            characterList.push(newCharacter);
+        }
+        console.log('characerList', characterList);
         saveCharacters();
+    } else {
+        console.log("not cheers!");
+        //setTimeout(generateContent(), 10000);
     }
+
+
 }
-//generateContent(); //content generation trigger
+setTimeout(generateContent(), 2000);
+//content generation trigger
 
 function showCharacters() {
     for (let i = 0; i < characterList.length; i++) {
@@ -194,3 +214,5 @@ function details(id) {
 }
 
 showCharacters();
+
+//TODO: buscar una forma de esperar un par de segundos para que se ejecute generateContent() con el fetch del API
