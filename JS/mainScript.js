@@ -101,7 +101,6 @@ function generateContent() {
     console.log('apiList', apiList);
 
     if (apiList.length > 0) {
-        console.log("cheers!");
         for (let i = 0; i < apiList.length; i++) {
             let id = apiList[i].id;
             let name = apiList[i].name;
@@ -109,7 +108,7 @@ function generateContent() {
             let status = apiList[i].status;
             let species = apiList[i].species;
             let lkl = apiList[i].location.name;
-            let fsi = apiList[i].origin;
+            let fsi = apiList[i].origin.name;
             let favorite = false;
             let image = apiList[i].image;
             let newCharacter = new Character(id, name, gender, status, species, lkl, fsi, favorite, image);
@@ -117,18 +116,24 @@ function generateContent() {
         }
         console.log('characerList', characterList);
         saveCharacters();
+        showCharacters();
+
     } else {
-        console.log("not cheers!");
-        //setTimeout(generateContent(), 10000);
+        alert("Couldn't fetch from API, retrying...")
+        setTimeout(generateContent, 2000);
+        showCharacters();
     }
 
 
 }
-setTimeout(generateContent(), 2000);
+setTimeout(generateContent, 500);
 //content generation trigger
 
 function showCharacters() {
+    console.log("cheers!");
+
     for (let i = 0; i < characterList.length; i++) {
+        console.log("success")
         let character = new Character(
             characterList[i].id, characterList[i].name, characterList[i].gender, characterList[i].status, characterList[i].species, characterList[i].lkl, characterList[i].fsi, characterList[i].favorite, characterList[i].image
         )
@@ -213,6 +218,5 @@ function details(id) {
     }
 }
 
-showCharacters();
 
 //TODO: buscar una forma de esperar un par de segundos para que se ejecute generateContent() con el fetch del API

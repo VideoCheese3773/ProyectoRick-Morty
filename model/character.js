@@ -28,7 +28,7 @@ class Character {
                 <h1 id="speciesResult">${this.species}</h1>
                 <h2 id="location">Last Known Location</h2>
                 <h1 id="locationResult">${this.lkl}</h1>
-                <h2 id="appearance">First Seen In</h2>
+                <h2 id="appearance">Origin</h2>
                 <h1 id="appearanceResult">${this.fsi}</h1>
                 <img class="star" id="star${this.id}" src="../ICONS/starFill.png" alt="starHollow" onclick="favorite(${this.id})" role="button">`;
 
@@ -52,7 +52,7 @@ class Character {
                 <h1 id="speciesResult">${this.species}</h1>
                 <h2 id="location">Last Known Location</h2>
                 <h1 id="locationResult">${this.lkl}</h1>
-                <h2 id="appearance">First Seen In</h2>
+                <h2 id="appearance">Origin</h2>
                 <h1 id="appearanceResult">${this.fsi}</h1>
                 <img class="star" id="star${this.id}" src="../ICONS/starHollow.png" alt="starHollow" onclick="favorite(${this.id})" role="button">`;
 
@@ -74,7 +74,7 @@ class Character {
                 <h1 id="speciesResult">${this.status}</h1>
                 <h1 id="location">Last Known Location</h1>
                 <h1 id="locationResult">${this.lkl}</h1>
-                <h1 id="appearance">First Seen In</h1>
+                <h1 id="appearance">Origin</h1>
                 <h1 id="appearanceResult">${this.fsi}</h1>
                 <img class="star" id="star${this.id}" class="star" src="../ICONS/starFill.png" alt="starHollow" onclick="favorite(${this.id})" role="button">`;
 
@@ -96,7 +96,7 @@ class Character {
                 <h1 id="speciesResult">${this.status}</h1>
                 <h1 id="location">Last Known Location</h1>
                 <h1 id="locationResult">${this.lkl}</h1>
-                <h1 id="appearance">First Seen In</h1>
+                <h1 id="appearance">Origin</h1>
                 <h1 id="appearanceResult">${this.fsi}</h1>
                 <img class="star" id="star${this.id}" class="star" src="../ICONS/starHollow.png" alt="starHollow" onclick="favorite(${this.id})" role="button">`;
 

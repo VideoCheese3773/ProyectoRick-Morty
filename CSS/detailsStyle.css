@@ -166,7 +166,7 @@
 #detailsImag{
     width: 35%;
     position: relative;
-    top: 8%;
+    top: 15%;
     left: 2%;
     box-shadow: 5px 5px 5px black;
 }
@@ -177,7 +177,7 @@
     font-weight: 100;
     font-size: 120px;
     position: relative;
-    bottom: 90%;
+    bottom: 70%;
     left: 40%;
 }
 
@@ -187,7 +187,7 @@
     font-weight: 100;
     font-size: 60px;
     position: relative;
-    bottom: 105%;
+    bottom: 85%;
     left: 40.2%;
 }
 
@@ -197,7 +197,7 @@
     font-weight: 100;
     font-size: 40px;
     position: relative;
-    bottom: 105%;
+    bottom: 85%;
     left: 40.2%;
 }
 
@@ -207,7 +207,7 @@
     font-weight: 100;
     font-size: 60px;
     position: relative;
-    bottom: 112%;
+    bottom: 92%;
     left: 42%;
 }
 
@@ -217,7 +217,7 @@
     font-weight: 100;
     font-size: 40px;
     position: relative;
-    bottom: 132.8%;
+    bottom: 112.8%;
     left: 65%;
 }
 
@@ -227,7 +227,7 @@
     font-weight: 100;
     font-size: 60px;
     position: relative;
-    bottom: 140%;
+    bottom: 120%;
     left: 67%;
 }
 
@@ -237,7 +237,7 @@
     font-weight: 100;
     font-size: 40px;
     position: relative;
-    bottom: 144%;
+    bottom: 124%;
     left: 40.2%;
 }
 
@@ -247,7 +247,7 @@
     font-weight: 100;
     font-size: 60px;
     position: relative;
-    bottom: 151%;
+    bottom: 131%;
     left: 42%;
 }
 
@@ -257,7 +257,7 @@
     font-weight: 100;
     font-size: 40px;
     position: relative;
-    bottom: 155%;
+    bottom: 135%;
     left: 40.2%;
 }
 
@@ -267,13 +267,13 @@
     font-weight: 100;
     font-size: 60px;
     position: relative;
-    bottom: 162%;
+    bottom: 142%;
     left: 42%;
 }
 
 .star{
     position: relative;
-    bottom: 250%;
+    bottom: 230%;
     left: 92%;
     width: 5%;
 }
