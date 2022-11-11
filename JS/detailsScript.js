@@ -159,4 +159,27 @@ function updateDetails() {
     showCharacter(character);
 }
 
+function searchCharacter(){
+    if (localStorage.getItem("search")) {
+        localStorage.removeItem("search");
+    }
+    const searchHTML = document.getElementById("search");
+    let search = searchHTML.value;
+    let searchList = [];
+    if (search !== "") {
+        for (let i = 0; i < characterList.length; i++) {
+            if (characterList[i].name.toLowerCase().includes(search.toLowerCase())) {
+                searchList.push(characterList[i]);
+            }
+        }
+    }
+    if (searchList.length == 0) {
+        alert("No Matches For Search")
+    } else{
+        let json = JSON.stringify(searchList);
+        localStorage.setItem("search", json);
+        window.location.href = './search.html'
+    }
+}
+
 updateDetails();

@@ -6,7 +6,7 @@
     <title>Rick & Morty Wiki</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../CSS/detailsStyle.css">
+    <link rel="stylesheet" href="../CSS/mainStyle.css">
   </head>
   <body>
 
@@ -15,8 +15,8 @@
       <img id="mainBackground" src="../IMAGS/mainBackground.png" alt="mainBackground">
 
       <div class="navBar">
-        <a id="arrowBackA" href="../HTML/index.html">
-            <img id="arrowBack" src="../ICONS/arrowBack.png" alt="arrowBack">
+        <a id="arrowBackA" onclick="logout()">
+          <img id="arrowBack" src="../ICONS/arrowBack.png" alt="arrowBack">
         </a>
         <div id="line"></div>
         <input type="text" placeholder="Search" id="search">
@@ -30,7 +30,7 @@
         <a id="userA" href="../HTML/user.html">
           <div class="user">
             <img id="userImag" src="../IMAGS/user.png" alt="user">
-            <h1 id="username">username placeholder</h1>
+            <h1 id="username">Username placeholder</h1>
           </div>
         </a>
 
@@ -61,7 +61,7 @@
           </div>
         </a>
 
-        <a id="optionA" href="../HTML/index.html">
+        <a id="optionA" onclick="logout()">
           <div class="option">
             <img id="optionImag" src="../ICONS/running.png" alt="sets">
             <h1>
@@ -79,7 +79,7 @@
     </div>
 
     <script src="../model/character.js" async defer></script>
-    <script src="../JS/detailsScript.js" async defer></script>
+    <script src="../JS/search.js" async defer></script>
 
   </body>
 </html>

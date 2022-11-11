@@ -5,8 +5,18 @@ const mainContent = document.getElementById("mainContent");
 let userList = [];
 let characterList = [];
 let favoriteList = [];
+let searchListRender = [];
 
 //Funciones de carga y guardado
+function loadSearch() {
+    let loadedSearch = localStorage.getItem("search");
+    if (loadedSearch !== null) {
+        searchListRender = JSON.parse(loadedSearch);
+    };
+    console.log("load search:", searchListRender);
+}
+loadSearch(); //primera carga de users
+
 function loadUsers() {
     let loadedUsers = localStorage.getItem("user");
     if (loadedUsers !== null) {
@@ -84,9 +94,9 @@ function logout() {
 //Funciones de logica Personajes
 
 function showCharacters() {
-    for (let i = 0; i < favoriteList.length; i++) {
+    for (let i = 0; i < searchListRender.length; i++) {
         let character = new Character(
-            favoriteList[i].id, favoriteList[i].name, favoriteList[i].gender, favoriteList[i].status, favoriteList[i].species, favoriteList[i].lkl, favoriteList[i].fsi, favoriteList[i].favorite, favoriteList[i].image
+            searchListRender[i].id, searchListRender[i].name, searchListRender[i].gender, searchListRender[i].status, searchListRender[i].species, searchListRender[i].lkl, searchListRender[i].fsi, searchListRender[i].favorite, searchListRender[i].image
         )
         if (character.favorite == true) {
             character.renderFav(mainContent);
