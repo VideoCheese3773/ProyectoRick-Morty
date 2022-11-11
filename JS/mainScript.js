@@ -130,7 +130,12 @@ function generateContent() {
         }
     }
 }
-setTimeout(generateContent, 300);
+
+if (localStorage.getItem("character")) {
+    generateContent();
+} else{
+    setTimeout(generateContent, 300);
+}
 //content generation trigger
 
 function showCharacters() {
