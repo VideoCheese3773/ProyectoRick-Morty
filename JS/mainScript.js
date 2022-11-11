@@ -81,6 +81,7 @@ function logout() {
             window.location.href = './index.html'
             favoriteList = [];
             saveFavorites();
+            localStorage.removeItem("character");
         }
     }
 
@@ -92,13 +93,13 @@ const fetchData = async () => {
     const data = await fetch(url);
     const dataJson = await data.json();
     apiList = dataJson.results;
-    console.log('fetch apiList', apiList);
+    //console.log('fetch apiList', apiList);
     saveApi();
 }
 fetchData();
 
 function generateContent() {
-    console.log('apiList', apiList);
+    //console.log('apiList', apiList);
 
     if (localStorage.getItem("character")) {
         console.log("characters loaded from memory")
@@ -134,12 +135,18 @@ setTimeout(generateContent, 300);
 
 function showCharacters() {
     for (let i = 0; i < characterList.length; i++) {
+        let favFlag = false
+        for (let j = 0; j < favoriteList.length; j++) {
+            if (characterList[i].id == favoriteList[j].id) {
+                favFlag = true;
+            }
+        }
         let character = new Character(
-            characterList[i].id, characterList[i].name, characterList[i].gender, characterList[i].status, characterList[i].species, characterList[i].lkl, characterList[i].fsi, characterList[i].favorite, characterList[i].image
+            characterList[i].id, characterList[i].name, characterList[i].gender, characterList[i].status, characterList[i].species, characterList[i].lkl, characterList[i].fsi, favFlag, characterList[i].image
         )
-        if (character.favorite == true) {
+        if (favFlag == true) {
             character.renderFav(mainContent);
-        } else if (character.favorite == false) {
+        } else if (favFlag == false) {
             character.renderNoFav(mainContent);
         }
     }
@@ -217,6 +224,3 @@ function details(id) {
         window.location.href = './details.html?id=' + character.id
     }
 }
-
-
-//TODO: buscar una forma de esperar un par de segundos para que se ejecute generateContent() con el fetch del API

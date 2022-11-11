@@ -75,6 +75,7 @@ function logout() {
             window.location.href = './index.html'
             favoriteList = [];
             saveFavorites();
+            localStorage.removeItem("character");
         }
     }
 }
