@@ -243,7 +243,7 @@
     font-size: 25px;
     position: relative;
     top: -48%;
-    left: -16%;
+    left: 0;
 }
 
 #locationResult{
@@ -252,7 +252,7 @@
     font-size: 35px;
     position: relative;
     top: -54%;
-    left: -14%;
+    left: 0;
 }
 
 #appearance{
@@ -261,7 +261,7 @@
     font-size: 25px;
     position: relative;
     top: -59%;
-    left: -27%;
+    left: 0;
 }
 
 #appearanceResult{
@@ -270,7 +270,7 @@
     font-size: 35px;
     position: relative;
     top: -65%;
-    left: -15%;
+    left: 0;
 }
 
 .star{

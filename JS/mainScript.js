@@ -129,7 +129,7 @@ function generateContent() {
         }
     }
 }
-setTimeout(generateContent, 500);
+setTimeout(generateContent, 300);
 //content generation trigger
 
 function showCharacters() {
