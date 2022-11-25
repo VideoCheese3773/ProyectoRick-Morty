@@ -23,8 +23,11 @@ function validateUsername(user) {
     }
     for (let index = 0; index < userList.length; index++) {
         if (userList[index].name == user) {
-            alert("This username is already taken");
-            return true
+            let loggedUser = findLoggedUser();
+                if (userList[index].name !== loggedUser.name) {
+                    alert("This username is already taken");
+                    return true
+                }
         }
     }
 }
@@ -38,8 +41,11 @@ function validateEmail(email) {
         for (let index = 0; index < userList.length; index++) {
             console.log(index, userList[index].email)
             if (userList[index].email == email) {
-                alert("This email is already in use")
+                let loggedUser = findLoggedUser();
+                if (userList[index].email !== loggedUser.email) {
+                    alert("This email is already in use")
                 return true
+                }
             }
         }
         return false
@@ -66,20 +72,19 @@ function validatePassword(password, verifyPassword) {
     }
 }
 
-function createNewUser(name, email, password, favoriteList) {
-    const newUser = {
-        name: name,
-        email: email,
-        password: password,
-        isLogged: true,
-        favoriteList: null
+function updateUser(name, email, password) {
+    for (let index = 0; index < userList.length; index++) {
+        if (userList[index].isLogged == true) {
+            userList[index].name = name;
+            userList[index].email = email;
+            userList[index].password = password;
+        }
     }
-    userList.push(newUser);
     saveUsers();
-    console.log("new user", newUser.name, "saved")
 }
 
 function signup() {
+    console.log("signup");
     const name = document.getElementById("name").value
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
@@ -92,8 +97,25 @@ function signup() {
     } else if (validatePassword(password, verifyPassword)) {
         return;
     } else {
-        createNewUser(name, email, password);
-        window.location.href = './main.html'
+        updateUser(name, email, password);
+        window.location.href = './user.html'
     }
-
 }
+
+function findLoggedUser() {
+    let loggedUser
+    for (let index = 0; index < userList.length; index++) {
+        if (userList[index].isLogged == true) {
+            loggedUser = userList[index];
+            return loggedUser;
+        }
+    }
+}
+
+function updateHUD() {
+    loggedUser = findLoggedUser();
+    document.getElementById("name").value = loggedUser.name;
+    document.getElementById("email").value = loggedUser.email;
+    document.getElementById("password").value = loggedUser.password;
+}
+updateHUD();

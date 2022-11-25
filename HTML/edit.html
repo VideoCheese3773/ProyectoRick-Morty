@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rick & Morty Wiki</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../CSS/registerStyle.css">
+    </head>
+
+    <body>
+        <div class="mainPage">
+
+            <img id="registerBackground" src="../IMAGS/registerBackground.png" alt="Register Background">
+
+            <div class="navBar">
+                <a id="arrowBackA" href="../HTML/user.html">
+                    <img id="arrowBack" src="../ICONS/arrowBack.png" alt="arrowBack">
+                </a>
+            </div>
+
+
+            <div class="register">
+
+                <input type="text" class="inputMod" placeholder="Profile Editor">
+
+                <input type="text" class="input" id="name" placeholder="Username">
+
+                <input type="email" class="input" id="email" placeholder="E-Mail">
+
+                <input type="password" class="input" id="password" placeholder="Password">
+
+                <input type="password" class="input" id="verifyPassword" placeholder="Verify Password">
+
+                <a id="signupButtonA" onclick="signup()">
+                    <div class="signupButton">
+                        <p id="signupText">Update</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    <script src="../model/user.js" async defer></script>
+    <script src="../JS/editScript.js" async defer></script>
+
+    </body>
+</html>
